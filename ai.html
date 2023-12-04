@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Recommendation System</title>
+    <style>
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: whitesmoke;
+      }
+
+      header .logo {
+        font-size: 25px;
+        font-family: 'Sriracha', cursive;
+        color: #f01010;
+        text-decoration: none;
+        margin-left: 30px;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url('https://as1.ftcdn.net/v2/jpg/02/80/07/36/1000_F_280073601_AWTJxROYVKqgNsmxkEbIBrUiBOGT71Q7.jpg');
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      label {
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #333;
+      }
+
+      #ageInput {
+        padding: 8px;
+        font-size: 14px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      h2 {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+      }
+
+      #recommendedRecipe {
+        font-size: 16px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <header style="background-color: bisque">
+      <header class="header">
+        <a href="#" class="logo">RASOI TALES</a>
+      </header>
+      <h1>Let me recommend you today's special</h1>
+    </header>
+    <h1>Recipe Recommendation System</h1>
+
+    <label for="ageInput">Enter Your Age:</label>
+    <input type="number" id="ageInput" placeholder="Your Age" />
+
+    <button onclick="getRecommendation()">Get Recipe Recommendation</button>
+
+    <h2>Recommended Recipe:</h2>
+    <p id="recommendedRecipe"></p>
+
+    <script>
+      async function getRecommendation() {
+        const age = document.getElementById('ageInput').value;
+
+        if (!age || age <= 0) {
+          alert('Please enter a valid age.');
+          return;
+        }
+
+        const response = await fetch(`/get_recommendation?age=${age}`);
+        const data = await response.json();
+
+        document.getElementById('recommendedRecipe').innerText = data.recipe;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- python recipe_app.py -->

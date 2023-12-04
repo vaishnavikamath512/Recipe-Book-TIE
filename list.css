@@ -1,0 +1,71 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.recipe {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  margin: 5px 0;
+}
+/* div.back {
+    background: url(https://images.creativemarket.com/0.1.0/ps/10403693/3640/2410/m1/fpnw/wm1/2-07718-.jpg?1622477229&s=78cf1c8e96f3b35b63da2094572e0316)
+      repeat;
+    border: 2px solid black;
+  } */
+div.trans {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.8;
+}
+body {
+  background-image: url(https://images.creativemarket.com/0.1.0/ps/10403693/3640/2410/m1/fpnw/wm1/2-07718-.jpg?1622477229&s=78cf1c8e96f3b35b63da2094572e0316);
+}
+/* Add more styles as needed */

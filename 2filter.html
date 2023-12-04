@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Indian Recipes</title>
+  <style>
+    body {
+      text-align:centre;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image:url("https://png.pngtree.com/thumb_back/fh260/background/20220516/pngtree-fresh-vegetables-surrounding-an-open-recipe-book-on-a-wooden-table-photo-image_24292814.jpg"); 
+      background-size: cover;
+      /* background-color:bisque; */
+      background-position: center;
+    }
+    .container {
+      width: 80%;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .subsection {
+      margin-left: 20px;
+    }
+    .recipe-link {
+      display: flex;
+      align-items: center;
+      color: #333;
+      text-decoration: none;
+      margin-bottom: 15px;
+      font-size: 25px;
+      
+    }
+    .recipe-link:hover {
+      color: #000;
+      font-weight: bold;
+    }
+    .dish-image {
+      width: 50px;
+      height: 40px;
+      margin-left: 4em; 
+      vertical-align: middle;
+      }
+      #search {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      font-size: 16px;
+    }
+    #search-container {
+      width: 60%;
+      margin: 20px auto;
+      text-align: center;
+    }
+    #search-btn {
+      padding: 10px 20px;
+      background-color: #f2f2f2;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #search-btn:hover {
+      background-color: #e6e6e6;
+    }
+    #recipe-title {
+      color: rgb(255, 0, 0); /* Change color as needed */
+      font-weight: bold;
+    }
+    .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.header .logo {
+  font-size: 25px;
+  font-family: 'Sriracha', cursive;
+  color: #f01010;
+  text-decoration: none;
+  margin-left: 30px;
+}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="1st about.html" class="logo">RASOI TALES</a>
+    <nav class="nav-items">
+      <a href="1st about.html">Back Home</a>
+    </nav>
+  </header>
+  <div class="container">
+    <div id="filters">
+      <label for="category">Filter by Category:</label>
+      <select id="category" onchange="filterRecipes()">
+        <option value="all">All</option>
+        <option value="starters">Starters</option>
+        <option value="main_courses">Main Courses</option>
+        <option value="desserts">Desserts</option>
+        <option value="beverages">Beverages</option>
+      </select>
+  </div>
+  <div id="search-container">
+    <input type="text" id="search" placeholder="Search Indian recipes" oninput="filterByName()" onkeypress="checkEnter(event)">
+    <button id="search-btn" onclick="checkEnter(event)">Search</button>
+  </div>
+  <h1>Indian Recipes</h1>
+</div>
+<div class="section" id="starters">
+  <div class="subsection">
+    <div class="dish-container">
+  <a href="paneer_tikka.html" class="recipe-link starters">
+    Paneer Tikka
+    <img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Neha_Mathur/Achari_Paneer_Tikka_Recipe_Party_Food.JPG" alt="Paneer Tikka" class="dish-image">
+  </a>
+  <a href="samosa_recipe.html" class="recipe-link starters">
+    Samosa
+    <img src="https://paattiskitchen.com/wp-content/uploads/2023/03/kmc_20230226_234026-1024x576.jpg" alt="Samosa" class="dish-image">
+  </a>
+  <a href="aloo_tikki.html" class="recipe-link starters">
+    Aloo Tikki
+    <img src="https://www.indianveggiedelight.com/wp-content/uploads/2023/07/aloo-tikki-1152x1536.jpg" alt="Aloo Tikki" class="dish-image">
+  </a>
+  <a href="pakora.html" class="recipe-link starters">
+    Pakora
+    <img src="https://silkroadrecipes.com/wp-content/uploads/2022/06/Potato-Pakora-square.jpg" alt="Pakora" class="dish-image">
+  </a>
+  <a href="dhokla.html" class="recipe-link starters">
+    dhokla
+    <img src="https://images.herzindagi.info/image/2022/Dec/easy-dhokla-recipe-at-home.jpg" alt="dhokla" class="dish-image">
+  </a>
+  </div>
+</div>
+</div>
+<div class="section" id="main_courses">
+  <div class="subsection">
+    <div class="dish-container">
+  <a href="chana_masala.html" class="recipe-link main courses">
+    Chana Masala
+    <img src="https://www.sharethespice.com/wp-content/uploads/2022/07/Chana-Masala-Horizontal-Full-1024x683.jpg" alt="Chana Masala" class="dish-image">
+  </a>
+  <a href="palak_paneerdish.html" class="recipe-link main courses">
+    Palak Paneer
+    <img src="https://images.hindustantimes.com/img/2021/11/26/550x309/palak_paneer_thumb_1637919968696_1637919979983.jpg" alt="Pa
+    lak Paneer" class="dish-image">
+  </a>
+  <a href="vegetable biryani.html" class="recipe-link main courses">
+    Vegetable Biryani
+    <img src="https://www.madhuseverydayindian.com/wp-content/uploads/2022/11/veg-biryani-768x1152.jpg" alt="Vegetable Biryani" class="dish-image">
+  </a>
+  <a href="aloo_gobi.html" class="recipe-link main courses ">
+    Aloo_Gobi
+    <img src="https://www.indianveggiedelight.com/wp-content/uploads/2023/03/aloo-gobi-stovetop-1152x1536.jpg" alt="Aloo Gobi" class="dish-image">
+  </a>
+  <a href="dal_makhani.html" class="recipe-link main courses">
+    Dal_Makhani
+    <img src="https://myfoodstory.com/wp-content/uploads/2018/08/Dal-Makhani-New-1-1024x1536.jpg" alt="Dal Makhani" class="dish-image">
+  </a>
+  </div>
+</div>
+</div>
+<div class="section" id="desserts">
+  <div class="subsection">
+    <div class="dish-container">
+  <a href="gulab_jamun.html" class="recipe-link desserts">
+    Gulab_Jamun
+    <img src="https://i0.wp.com/aartimadan.com/wp-content/uploads/2020/11/milk-powder-gulab-jamuns.jpg?w=1000&ssl=1" alt="Gulab Jamun" class="dish-image">
+  </a>
+  <a href="rasgulla.html" class="recipe-link desserts">
+    Rasgulla
+    <img src="https://images.news18.com/ibnlive/uploads/2023/01/rasgulla-rosogulla-indian-sweet-made-from-khoya-soft-spongy-earthen-bowl-yellow-napkin-brown-background-16746639853x2.jpg?impolicy=website&width=510&height=356" alt="Rasgulla" class="dish-image">
+  </a>
+  <a href="kheer.html" class="recipe-link desserts">
+    kheer
+    <img src="https://myheartbeets.com/wp-content/uploads/2022/04/instant-pot-vermicelli-kheer-1024x1536.jpg" alt="Kheer" class="dish-image">
+  </a>
+  <a href="jalebi.html" class="recipe-link desserts">
+    Jalebi
+    <img src="https://mabtheo.com/cdn/shop/articles/Jalebi_900x.jpg?v=1663504368" alt="Jalebi" class="dish-image">
+  </a>
+  <a href="barfi.html" class="recipe-link desserts">
+    Barfi
+    <img src="https://www.cookwithkushi.com/wp-content/uploads/2021/05/best_kaju_katli_kaju_barfi_recipe_00-1164x1536.jpg" alt="Barfi" class="dish-image">
+  </a>
+  </div>
+</div>
+</div>
+<div class="section" id="beverages">
+  <div class="subsection">
+    <div class="dish-container">
+  <a href="masala_chai.html" class="recipe-link beverages">
+    Masala_chai
+    <img src="https://www.thepahadistory.com/cdn/shop/articles/TPS---1080-X-683-pxl---03-06-22--A1.jpg?v=1654254712&width=1000" alt="Masala Chai" class="dish-image">
+  </a>
+  <a href="lassi.html" class="recipe-link beverages">
+    lassi
+    <img src="https://www.cookwithmanali.com/wp-content/uploads/2021/06/Lassi-Recipe-768x1164.jpg" alt="Lassi" class="dish-image">
+  </a>
+  <a href="mango_lassi.html" class="recipe-link beverages">
+    Mango_Lassi
+    <img src="https://houseofnasheats.com/wp-content/uploads/2023/08/Mango-Lassi-Recipe-14-1024x1536.jpg" alt="Mango Lassi" class="dish-image">
+  </a>
+  <a href="thandai.html" class="recipe-link beverages">
+    Thandai
+    <img src="https://masalaandchai.com/wp-content/uploads/2021/03/Thandai-1025x1536.jpg" alt="Thandai" class="dish-image">
+  </a>
+  <a href="buttermilk.html" class="recipe-link beverages">
+    Buttermilk
+    <img src="https://insanelygoodrecipes.com/wp-content/uploads/2023/05/Homemade-Buttermilk-Made-from-Yogurt-1024x1024.webp" alt="Buttermilk" class="dish-image">
+  </a>
+   </div>
+  </div>
+<script>
+ function filterRecipes() {
+        var filterValue = document.getElementById('search').value.toLowerCase();
+        var category = document.getElementById('category').value;
+        var sections = document.getElementsByClassName('section');
+
+        for (var i = 0; i < sections.length; i++) {
+          var recipes = sections[i].getElementsByClassName('recipe-link');
+          sections[i].style.display = 'none';
+
+          for (var j = 0; j < recipes.length; j++) {
+            var dishName = recipes[j].textContent.toLowerCase();
+            var display = (category === 'all' || sections[i].id === category) && (dishName.includes(filterValue) || filterValue === '');
+            recipes[j].parentNode.style.display = display ? 'block' : 'none';
+            if (display) {
+              sections[i].style.display = 'block';
+            }
+          }
+        }
+      }
+      function filterByName() {
+        var input, filter, sections, dishes, a, i, txtValue;
+        input = document.getElementById('search');
+        filter = input.value.toUpperCase();
+        sections = document.getElementsByClassName('section');
+
+        for (i = 0; i < sections.length; i++) {
+          dishes = sections[i].getElementsByClassName('recipe-link');
+
+          for (var j = 0; j < dishes.length; j++) {
+            a = dishes[j];
+            txtValue = a.textContent || a.innerText;
+
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              dishes[j].style.display = '';
+            } else {
+              dishes[j].style.display = 'none';
+            }
+          }
+        }
+      }
+      function checkEnter(event) {
+        if (event.key === 'Enter') {
+          var input, filter, sections, dishes, a, i, txtValue;
+          input = document.getElementById('search');
+          filter = input.value.toUpperCase();
+          sections = document.getElementsByClassName('section');
+
+          for (i = 0; i < sections.length; i++) {
+            dishes = sections[i].getElementsByClassName('recipe-link');
+
+            for (var j = 0; j < dishes.length; j++) {
+              a = dishes[j];
+              txtValue = a.textContent || a.innerText;
+
+              if (txtValue.toUpperCase() === filter) {
+                dishes[j].style.display = '';
+              } else {
+                dishes[j].style.display = 'none';
+              }
+            }
+          }
+        }
+      }
+      
+</script>
+</body>
+</html>
